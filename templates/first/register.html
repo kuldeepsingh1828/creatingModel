@@ -1,0 +1,20 @@
+{% extends 'first/header.html' %}
+
+    {% block content %}
+    <title>Login</title>
+    <div class="container mt-5">
+        <form>
+            <label for="username">Enter Username</label>
+            <input class="form-control" type="text" name="username" id="username">
+            <label for="password">Enter Password</label>
+            <input class="form-control" type="password" name="password" id="password">
+            <label for="cpassword">Confirm Password</label>
+            <input class="form-control" type="password" name="cpassword" id="cpassword">
+            <label for="email">Enter Email</label>
+            <input class="form-control" type="email" name="email" id="email">
+            <label for="phone">Enter Number</label>
+            <input class="form-control" type="number" name="phone" id="phone">
+            <input class="btn btn-info mt-4" type="submit" value="Login Me">
+        </form>
+    </div>
+  {%endblock content%}
