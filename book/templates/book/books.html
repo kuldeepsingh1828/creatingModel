@@ -5,11 +5,13 @@
     <title>Books</title>
 </head>
 <body>
-    <center><h1>All Books we have</h1></center>
+    <center>
+        <h1>All Books we have</h1>
+    </center>
     {% for book in books %}
     <h1>{{book.book_Name}}</h1>
     <p>{{book.author_Name}}</p>
     <p>{{book.descripton}}</p>
-    {%endfor%}
+    {% endfor %}
 </body>
 </html>
