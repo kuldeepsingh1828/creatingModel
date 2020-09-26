@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teachers</title>
+</head>
+<body>
+    <h1>Teacher here</h1>
+   {% for teacher in teachers %}
+    <div>
+        <h2>{{teacher.id}}</h2>
+        <h1>{{teacher.name | upper }}</h1>
+        <h2>{{teacher.subject_Name|lower}}</h2>
+        <h2>{{teacher.qualification}}</h2>
+        <hr>
+    </div>
+    {% endfor %}
+</body>
+</html>
