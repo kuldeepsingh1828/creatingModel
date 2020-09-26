@@ -1,19 +1,29 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <title>Teachers</title>
 </head>
 <body>
     <h1>Teacher here</h1>
+    <div class="row container">
    {% for teacher in teachers %}
-    <div>
-        <h2>{{teacher.id}}</h2>
-        <h1>{{teacher.name | upper }}</h1>
-        <h2>{{teacher.subject_Name|lower}}</h2>
-        <h2>{{teacher.qualification}}</h2>
-        <hr>
-    </div>
+        <div class="col-md-4">
+            <img src="/media/{{teacher.image}}" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h2>{{teacher.id}}</h2>
+            <h1>{{teacher.name | upper }}</h1>
+            <h2>{{teacher.subject_Name|lower}}</h2>
+            <h2>{{teacher.qualification}}</h2>
+            <hr>
+        </div>
     {% endfor %}
+        </div>
 </body>
 </html>

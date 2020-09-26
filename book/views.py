@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from .models import Book
+from .models import Book2
 
 
 def index(request):
-    books = Book.objects.all()
+    books = Book2.objects.all()
     return  render(request, 'book/books.html', {'books': books})
