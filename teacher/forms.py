@@ -11,3 +11,13 @@ class Register(forms.ModelForm):
             "subject_Name": forms.TextInput(attrs={'class': 'form-control mt-2'}),
             "qualification": forms.TextInput(attrs={'class': 'form-control mt-2'}),
         }
+
+
+class Login(forms.ModelForm):
+    class Meta:
+        model = Teacher
+        fields = ['name','password']
+        widgets = {
+            "name": forms.TextInput(attrs={'class': 'form-control mt-2'}),
+            "password" : forms.PasswordInput(attrs={'class': 'form-control mt-2'}),
+        }

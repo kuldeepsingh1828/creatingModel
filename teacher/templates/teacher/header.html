@@ -19,9 +19,20 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
       </li>
+      {% if 'name' in request.session.keys %}
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link" href="#">{{request.session.name}}</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/teacher/logout">logout</a>
+      </li>
+        {%endif%}
+        {% if 'name' not in request.session.keys %}
+      <li class="nav-item">
+        <a class="nav-link" href="#">GUEST</a>
+      </li>
+        {%endif%}
+
     </ul>
   </div>
 </nav>

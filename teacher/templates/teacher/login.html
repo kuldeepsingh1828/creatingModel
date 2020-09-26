@@ -3,10 +3,10 @@
     <title>Register</title>
     <div class="container">
         <h2>Register Here!</h2>
-        <form method="post" enctype="multipart/form-data">
+        <form method="post">
             {% csrf_token %}
-            {{register}}
-            <input type="submit" value="Register Me" class="mt-3 btn btn-block btn-success">
+            {{login}}
+            <input type="submit" value="Login Me" class="mt-3 btn btn-block btn-success">
         </form>
     </div>
 {%endblock%}

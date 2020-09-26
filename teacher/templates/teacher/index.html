@@ -6,7 +6,9 @@
     <div class="row container">
    {% for teacher in teachers %}
         <div class="col-md-4">
-            <img src="/media/{{teacher.image}}" alt="" class="img-fluid">
+            {% if teacher.image %}
+                <img src="/media/{{teacher.image}}" alt="" class="img-fluid">
+            {%endif%}
         </div>
         <div class="col-md-8">
             <h2>{{teacher.id}}</h2>
