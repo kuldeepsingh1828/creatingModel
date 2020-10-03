@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'js/popper.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <title>Books</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-5">Update Book</h1>
+    <hr>
+    <form method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        <input type="text" name="book_Name" value="{{book.0.book_Name}}" class="form-control my-2">
+        <input type="text" name="author_Name" value="{{book.0.author_Name}}" class="form-control my-2">
+        <input type="date" name="pub_date" value="{{book.0.pub_date}}" class="form-control my-2">
+        <input type="number" name="price" value="{{book.0.price}}" class="form-control my-3">
+        <img src="/media/{{book.0.image}}" style="height:200px; width:200px" class="img-fluid my-2">
+        <input type="file" name="image" value="">
+        <input type="submit" value="update Book" class="btn btn-block btn-info">
+    </form>
+</div>
+</body>
+</html>

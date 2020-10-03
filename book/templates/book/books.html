@@ -24,6 +24,8 @@
         <p>{{book.author_Name}}</p>
         <p>{{book.pub_date}}</p>
         <p>Rs. {{book.price }}</p>
+            <a href="/book/delete/{{book.id}}" class="btn btn-danger mr-5">DELETE</a>
+            <a href="/book/update/{{book.id}}" class="btn btn-info ml-5">UPDATE</a>
         </div>
     {% endfor %}
     </div>
